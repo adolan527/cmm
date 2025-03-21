@@ -2,9 +2,7 @@
 
 Takes in a 256x4 matrix of 32 bit complex integers, returns the matrix times its conjugate transpose.
 
-## Overview
-
-The 256x4 matrix times it complex conjugate is implemented and returns answers similar to those produced by matlab. 
+## Issues
 
 1. The imaginary parts should be 0, but due to (what I assume is) rounding errors there are some values in there a roughly 
 100x smaller than the real values in the non-diagonal indices.  Should the imaginary part be manually zeroed out? This would allow 
