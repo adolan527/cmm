@@ -42,6 +42,7 @@ module complex_matrix_adder_parallel #(
 			s_axis_a_tready <= 0;
 			s_axis_b_tready <= 0;
 			m_axis_tuser <= 0;
+			m_axis_tvalid <= 0;
 		end else begin
 			m_axis_tlast <= s_axis_a_tlast | s_axis_b_tlast;
 			s_axis_a_tready <= m_axis_tready;

@@ -22,7 +22,7 @@ end
 
 disp('Files generated successfully.');
 
-result = real(matrix * matrix') %generate hermician
+result = matrix * matrix' %generate hermician
 
 % Open file for writing
 filename = 'matlab_result.txt';

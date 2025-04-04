@@ -3,20 +3,20 @@
 `define COLUMNS 256
 `define ROWS 4
 
-`define CHANNELPATH0 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/channel1.txt"
-`define CHANNELPATH1 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/channel2.txt"
-`define CHANNELPATH2 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/channel3.txt"
-`define CHANNELPATH3 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/channel4.txt"
-`define RESULT_PATH  	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/verilog_result.txt"
-`define READABLE_PATH	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/eight/readable_result.txt"
+`define CHANNELPATH0 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/channel1.txt"
+`define CHANNELPATH1 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/channel2.txt"
+`define CHANNELPATH2 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/channel3.txt"
+`define CHANNELPATH3 	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/channel4.txt"
+`define RESULT_PATH  	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/verilog_result.txt"
+`define READABLE_PATH	"C:/Users/Aweso/Verilog/Aquapack/cmm/sim/mult_zero/test_2/readable_result.txt"
 
 
 // Two hacks:
 // Bit shift output to double
-// Manually set imaginary values to zero.
 
 
-module cmm_tb();
+
+module cmm_zero_tb();
 
 
 
@@ -41,7 +41,7 @@ wire[63:0]  result_matrix_3_3,
 			result_matrix_0_1,
 			result_matrix_0_0;
 
-complex_matrix_multiplier complex_matrix_multiplier_inst(
+complex_matrix_multiplier_zeroed complex_matrix_multiplier_inst(
  .clk(clk),           //input
  .reset_n(reset_n),   //input
  .clken(clken),       //input
@@ -159,7 +159,7 @@ initial begin
 clk = 0; clken = 1; reset_n = 0; index = 0; s_axis_tlast = 0; s_axis_tvalid = 0; s_axis_tuser = 0;
 #10 m_axis_dout_tready = 1;
 #150 reset_n = 1;
-#10 initMemory(); s_axis_tvalid = 1; 
+#10 initMemory(); 
 #10 sendMemory();
 
 end

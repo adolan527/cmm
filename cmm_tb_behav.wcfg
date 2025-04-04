@@ -3,53 +3,178 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="complex_matrix_adder_tb_behav.wdb" id="1">
+      <db_ref path="cmm_zero_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="complex_matrix_adder_tb" />
+            <top_module name="cmm_zero_tb" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="33.712 ns"></ZoomEndTime>
-      <Cursor1Time time="945.000 ns"></Cursor1Time>
+      <ZoomStartTime time="88.166 ns"></ZoomStartTime>
+      <ZoomEndTime time="312.367 ns"></ZoomEndTime>
+      <Cursor1Time time="185.566 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
-   <wvobject fp_name="/complex_matrix_adder_tb/clk" type="logic">
+   <WVObjectSize size="39" />
+   <wvobject fp_name="/cmm_zero_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/dina" type="array">
-      <obj_property name="ElementShortName">dina[512:0]</obj_property>
-      <obj_property name="ObjectShortName">dina[512:0]</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/dinb" type="array">
-      <obj_property name="ElementShortName">dinb[512:0]</obj_property>
-      <obj_property name="ObjectShortName">dinb[512:0]</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/clken" type="logic">
+      <obj_property name="ElementShortName">clken</obj_property>
+      <obj_property name="ObjectShortName">clken</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/dout" type="array">
-      <obj_property name="ElementShortName">dout[512:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[512:0]</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/s_axis_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/dina_mem" type="array">
-      <obj_property name="ElementShortName">dina_mem[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">dina_mem[15:0][31:0]</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/s_axis_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/dinb_mem" type="array">
-      <obj_property name="ElementShortName">dinb_mem[15:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">dinb_mem[15:0][31:0]</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/s_axis_tuser" type="logic">
+      <obj_property name="ElementShortName">s_axis_tuser</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tuser</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/s_axis_a_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_a_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_a_tvalid</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/m_axis_dout_tready" type="logic">
+      <obj_property name="ElementShortName">m_axis_dout_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tready</obj_property>
    </wvobject>
-   <wvobject fp_name="/complex_matrix_adder_tb/s_axis_b_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_b_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_b_tvalid</obj_property>
+   <wvobject fp_name="/cmm_zero_tb/channel_0_base" type="array">
+      <obj_property name="ElementShortName">channel_0_base[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_0_base[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_1_base" type="array">
+      <obj_property name="ElementShortName">channel_1_base[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_1_base[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_2_base" type="array">
+      <obj_property name="ElementShortName">channel_2_base[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_2_base[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_3_base" type="array">
+      <obj_property name="ElementShortName">channel_3_base[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_3_base[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/s_axis_tready" type="logic">
+      <obj_property name="ElementShortName">s_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/m_axis_dout_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_dout_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/m_axis_dout_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/m_axis_dout_tuser" type="array">
+      <obj_property name="ElementShortName">m_axis_dout_tuser[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_dout_tuser[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_3_3" type="array">
+      <obj_property name="ElementShortName">result_matrix_3_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_3_3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_3_2" type="array">
+      <obj_property name="ElementShortName">result_matrix_3_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_3_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_3_1" type="array">
+      <obj_property name="ElementShortName">result_matrix_3_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_3_1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_3_0" type="array">
+      <obj_property name="ElementShortName">result_matrix_3_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_3_0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_2_3" type="array">
+      <obj_property name="ElementShortName">result_matrix_2_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_2_3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_2_2" type="array">
+      <obj_property name="ElementShortName">result_matrix_2_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_2_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_2_1" type="array">
+      <obj_property name="ElementShortName">result_matrix_2_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_2_1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_2_0" type="array">
+      <obj_property name="ElementShortName">result_matrix_2_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_2_0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_1_3" type="array">
+      <obj_property name="ElementShortName">result_matrix_1_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_1_3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_1_2" type="array">
+      <obj_property name="ElementShortName">result_matrix_1_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_1_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_1_1" type="array">
+      <obj_property name="ElementShortName">result_matrix_1_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_1_1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_1_0" type="array">
+      <obj_property name="ElementShortName">result_matrix_1_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_1_0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_0_3" type="array">
+      <obj_property name="ElementShortName">result_matrix_0_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_0_3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_0_2" type="array">
+      <obj_property name="ElementShortName">result_matrix_0_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_0_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_0_1" type="array">
+      <obj_property name="ElementShortName">result_matrix_0_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_0_1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/result_matrix_0_0" type="array">
+      <obj_property name="ElementShortName">result_matrix_0_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_matrix_0_0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/index" type="array">
+      <obj_property name="ElementShortName">index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">index[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_0" type="array">
+      <obj_property name="ElementShortName">channel_0[256:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_0[256:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_1" type="array">
+      <obj_property name="ElementShortName">channel_1[256:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_1[256:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_2" type="array">
+      <obj_property name="ElementShortName">channel_2[256:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_2[256:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/channel_3" type="array">
+      <obj_property name="ElementShortName">channel_3[256:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_3[256:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/resultCount" type="array">
+      <obj_property name="ElementShortName">resultCount[31:0]</obj_property>
+      <obj_property name="ObjectShortName">resultCount[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cmm_zero_tb/resultFile" type="array">
+      <obj_property name="ElementShortName">resultFile[31:0]</obj_property>
+      <obj_property name="ObjectShortName">resultFile[31:0]</obj_property>
    </wvobject>
 </wave_config>
