@@ -39,16 +39,16 @@ The same complex multipliers used to calculate rxx could be reused in this calcu
 ### src
 | File | Description |
 | -------- | ------- |
-| [bartlett.v](https://github.com/adolan527/cmm/blob/main/bartlett.v) | Top-level module instantiating rxx and p_theta. AXI interface to FFT. |
-| [common.v](https://github.com/adolan527/cmm/blob/main/common.v) | Commonly used modules. (complex adder, shift register, etc. |
-| [complex_mult.v](https://github.com/adolan527/cmm/blob/main/complex_mult.v) | 256x4 complex matrix multiplied by its conjugate transpose. Similar structure to mult.v. |
-| [complex_mult_1_mult.v](https://github.com/adolan527/cmm/blob/main/complex_mult_1_mult.v) | Complex multiplication used in p_theta. Only 1 complex mult IP core. |
-| [matrix_adder.v](https://github.com/adolan527/cmm/blob/main/matrix_adder.v) | Performs element-wise matrix addition. Implemented and tested, but found to be unneccessary. |
-| [mult.v](https://github.com/adolan527/cmm/blob/main/mult.v) | 256x4 matrix multiplied by its transpose. |
-| [p_theta.v](https://github.com/adolan527/cmm/blob/main/p_theta.v) | Outputs P(theta), with the inputs being rxx and theta. Controller will likely give theta value. |
-| [rxx.v](https://github.com/adolan527/cmm/blob/main/rxx.v) | Outputs rxx from IFFT output. Contains complex_mult and scalar_divide. |
-| [scalar_divide.v](https://github.com/adolan527/cmm/blob/main/scalar_divide.v) | Used in rxx to divide by a constant scalar value. |
-| [top.v](https://github.com/adolan527/cmm/blob/main/top.v) | Instantiation of all major modules to allow for easy inspection with elaborated design. |
+| [bartlett.v](https://github.com/adolan527/cmm/blob/main/src/bartlett.v) | Top-level module instantiating rxx and p_theta. AXI interface to FFT. |
+| [common.v](https://github.com/adolan527/cmm/blob/main/src/common.v) | Commonly used modules. (complex adder, shift register, etc. |
+| [complex_mult.v](https://github.com/adolan527/cmm/blob/main/src/complex_mult.v) | 256x4 complex matrix multiplied by its conjugate transpose. Similar structure to mult.v. |
+| [complex_mult_1_mult.v](https://github.com/adolan527/cmm/blob/main/src/complex_mult_1_mult.v) | Complex multiplication used in p_theta. Only 1 complex mult IP core. |
+| [matrix_adder.v](https://github.com/adolan527/cmm/blob/main/src/matrix_adder.v) | Performs element-wise matrix addition. Implemented and tested, but found to be unneccessary. |
+| [mult.v](https://github.com/adolan527/cmm/blob/main/src/mult.v) | 256x4 matrix multiplied by its transpose. |
+| [p_theta.v](https://github.com/adolan527/cmm/blob/main/src/p_theta.v) | Outputs P(theta), with the inputs being rxx and theta. Controller will likely give theta value. |
+| [rxx.v](https://github.com/adolan527/cmm/blob/main/src/rxx.v) | Outputs rxx from IFFT output. Contains complex_mult and scalar_divide. |
+| [scalar_divide.v](https://github.com/adolan527/cmm/blob/main/src/scalar_divide.v) | Used in rxx to divide by a constant scalar value. |
+| [top.v](https://github.com/adolan527/cmm/blob/main/src/top.v) | Instantiation of all major modules to allow for easy inspection with elaborated design. |
 
 
 
