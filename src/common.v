@@ -3,6 +3,23 @@
 
 
 
+
+
+
+
+module complex_adder #(ELEMENT_SIZE = 16)(
+	input[ELEMENT_SIZE-1:0] a, b,
+	output reg[ELEMENT_SIZE-1:0] sum
+	);
+	
+	always@(*)begin
+		sum = {
+		a[ELEMENT_SIZE-1:ELEMENT_SIZE/2] + b[ELEMENT_SIZE-1:ELEMENT_SIZE/2],
+		a[ELEMENT_SIZE/2 - 1:0] + b[ELEMENT_SIZE/2 - 1:0]};
+	end
+	
+endmodule
+
 module shift_register #(
 	parameter SIZE = 32,
 	parameter STAGES = 3

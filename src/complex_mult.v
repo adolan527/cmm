@@ -158,10 +158,10 @@ module complex_matrix_multiplier_zeroed #(
 	
 	wire[SIZE-1:0] ground;
 	wire[SIZE-1:0] channel_0_conj, channel_1_conj, channel_2_conj, channel_3_conj;
-	assign channel_0_conj = {~channel_0_base[SIZE-1: SIZE/2 ] + 1, channel_0_base[SIZE/2 -1:0]};
-	assign channel_1_conj = {~channel_1_base[SIZE-1: SIZE/2 ] + 1, channel_1_base[SIZE/2 -1:0]};
-	assign channel_2_conj = {~channel_2_base[SIZE-1: SIZE/2 ] + 1, channel_2_base[SIZE/2 -1:0]};
-	assign channel_3_conj = {~channel_3_base[SIZE-1: SIZE/2 ] + 1, channel_3_base[SIZE/2 -1:0]};
+	assign channel_0_conj = {-channel_0_base[SIZE-1: SIZE/2 ], channel_0_base[SIZE/2 -1:0]};
+	assign channel_1_conj = {-channel_1_base[SIZE-1: SIZE/2 ], channel_1_base[SIZE/2 -1:0]};
+	assign channel_2_conj = {-channel_2_base[SIZE-1: SIZE/2 ], channel_2_base[SIZE/2 -1:0]};
+	assign channel_3_conj = {-channel_3_base[SIZE-1: SIZE/2 ], channel_3_base[SIZE/2 -1:0]};
 
 	
 	always@(posedge clk or negedge reset_n)begin
